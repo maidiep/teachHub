@@ -31,12 +31,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-<br>
-        <h1 class="text-center">
-                <i class="fas fa-chalkboard-teacher"></i>
-                TeachHub
-            </h1>
-            <br>
+    <br>
+    <h1 class="text-center">
+        <i class="fas fa-chalkboard-teacher"></i>
+        TeachHub
+    </h1>
+    <br>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -60,6 +60,10 @@
                                 <a class="nav-link" href="#">My Profile
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SignOut
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -71,77 +75,68 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-4">
-                            <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x350"></a>                        <div>
-                         <a id="modal-633083" href="#modal-container-633083" role="button" class="btn" data-toggle="modal">Upload a Lesson</a>
-                        </div>
-                        </div>
-
-                        <div class="modal fade" id="modal-container-633083" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="myModalLabel">
-                                            Upload a Lesson
-                                        </h5> 
-                                        <button type="button" class="close" data-dismiss="modal">
-                                            <span aria-hidden="true">×</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        ...
-                                    </div>
-                                    <div class="modal-footer">
-                                         
-                                        <button type="button" class="btn btn-primary">
-                                            Upload
-                                        </button> 
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            
-                        </div>
-                        
-                    
-                    <div class="col-md-4">
-                        <h3 class="text-left">
-                            My Uploads
-                        </h3>
-                        <ul>
-                            <li class="list-item">
-                                Lorem ipsum dolor sit amet
-                            </li>
-                            <li class="list-item">
-                                Consectetur adipiscing elit
-                            </li>
-                            <li class="list-item">
-                                Integer molestie lorem at massa
-                            </li>
-                          
-                        </ul>
+                    <div class="col-md-3">
+                        <a href="https://placeholder.com">
+                            <img src="http://via.placeholder.com/300x300">
+                        </a>
                     </div>
-                    <div class="col-md-4">
-                        <h3 class="text-left">
-                            My Downloads
-                        </h3>
-                        <ul>
-                                <li class="list-item">
-                                    Lorem ipsum dolor sit amet
-                                </li>
-                                <li class="list-item">
-                                    Consectetur adipiscing elit
-                                </li>
-                                <li class="list-item">
-                                    Integer molestie lorem at massa
-                                </li>
-                              
-                            </ul>
+
+
+                    <div class="container-fluid col-md-9">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-upload-tab" data-toggle="tab" href="#nav-upload" role="tab" aria-controls="nav-home"
+                                    aria-selected="true">Upload a Lesson</a>
+                                <a class="nav-item nav-link" id="nav-myupload-tab" data-toggle="tab" href="#nav-myupload" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false">My Uploads</a>
+                                <a class="nav-item nav-link" id="nav-mydownload-tab" data-toggle="tab" href="#nav-mydownload" role="tab" aria-controls="nav-contact"
+                                    aria-selected="false">My Downloads</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-upload" role="tabpanel" aria-labelledby="nav-upload-tab">
+                                <div class="card-body">
+                                    <p class="card-text">Ready to share another lesson?</p>
+                                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target- "#uploadPopUp">Upload a Lesson</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-myupload" role="tabpanel" aria-labelledby="nav-myupload-tab">Butterfly Life Cycle</div>
+                            <div class="tab-pane fade" id="nav-mydownload" role="tabpanel" aria-labelledby="nav-mydownload-tab">Introduction to Computer Science</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-  </body>
-</html>    
+    <!-- start upload modal -->
+    <div class="modal-fade" id="uploadPopUp">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <h3 class="modal-title">Upload a Lesson</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- submit -->
+                    <div class="modal-footer">
+                        <button class="btn btn-success btn-block">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
